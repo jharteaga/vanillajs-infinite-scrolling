@@ -79,7 +79,7 @@ body {
 
 @keyframes jumped {
   0% {
-    transform: translateY(0deg);
+    transform: translateY(0px);
   }
   100% {
     transform: translateY(-25px);
