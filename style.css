@@ -48,3 +48,44 @@ body {
   font-size: 13px;
   margin-left: 10px;
 }
+
+.loading {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+}
+
+.ball {
+  width: 17px;
+  height: 17px;
+  background-color: #000;
+  margin: 6px;
+  border-radius: 50px;
+  opacity: 0.3;
+  animation: jumped 0.38s infinite alternate;
+}
+
+.ball:nth-of-type(2) {
+  animation-delay: 0.1s;
+}
+
+.ball:nth-of-type(3) {
+  animation-delay: 0.2s;
+}
+
+@keyframes jumped {
+  0% {
+    transform: translateY(0deg);
+  }
+  100% {
+    transform: translateY(-25px);
+  }
+}
+
+.loading.active {
+  opacity: 1;
+}
